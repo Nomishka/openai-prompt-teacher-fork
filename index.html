@@ -1,48 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatGPT App</title>
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+    <title>Prompt Practice</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="bg-gray-100">
-    <div class="max-w-lg mx-auto">
-      <div class="p-4 bg-white rounded-lg shadow-md">
-        <div class="mb-4">
-          <label for="api-key" class="block mb-2 text-gray-700 font-bold">Enter your OpenAI API key:</label>
-          <input type="text" id="api-key" name="api-key" class="border border-gray-400 rounded-md py-2 px-3 w-full" />
-          <button id="save-api-key" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Save</button>
-        </div>
-        <div id="chat-container" class="overflow-y-auto max-h-64">
-          <!-- Chat messages go here -->
-        </div>
-        <div class="mt-4">
-          <label for="message" class="block mb-2 text-gray-700 font-bold">Message:</label>
-          <input type="text" id="message" name="message" class="border border-gray-400 rounded-md py-2 px-3 w-full" />
-          <button id="send-message" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
-        </div>
+  <body>
+    <div id="app">
+      <h1>Prompt Practice</h1>
+      <div id="settings">
+        <label for="api-key">OpenAI API Key:</label>
+        <input type="password" id="api-key">
+        <label for="notification-time">Notification Time:</label>
+        <input type="time" id="notification-time">
+        <button onclick="saveSettings()">Save</button>
       </div>
-      <div class="mt-4 text-center">
-        <button id="settings-button" class="text-blue-500 hover:text-blue-600 focus:outline-none">
-          ⚙️
-        </button>
-      </div>
-      <div id="settings-menu" class="hidden p-4 bg-white rounded-lg shadow-md mt-4">
-        <h2 class="text-lg font-bold mb-2">Settings</h2>
-        <div class="mb-4">
-          <label for="notification-time" class="block mb-2 text-gray-700 font-bold">Set notification time:</label>
-          <input type="time" id="notification-time" name="notification-time" class="border border-gray-400 rounded-md py-2 px-3 w-full" />
-        </div>
-        <div>
-          <label for="api-key" class="block mb-2 text-gray-700 font-bold">Enter your OpenAI API key:</label>
-          <input type="text" id="settings-api-key" name="api-key" class="border border-gray-400 rounded-md py-2 px-3 w-full" />
-          <button id="save-settings" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Save</button>
-        </div>
-      </div>
+      <button onclick="practicePrompting()">Practice Now!</button>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@openai/api@0.4.0/browser.js"></script>
-    <script src="./index.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
