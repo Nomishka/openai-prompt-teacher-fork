@@ -3,8 +3,12 @@ Notification.requestPermission(function(status) {
 });
 
 function displayNotification() {
-  if (Notification.permission == 'granted') {
-    new Notification('Hello world!');
+  if (Notification.permission === 'granted') {
+    navigator.serviceWorker.getRegistration().then(reg => {
+      reg.showNotification('Hello world!');
+    }).catch(error => {
+      console.log("Error showing notification:", error);
+    });
   }
 }
 
