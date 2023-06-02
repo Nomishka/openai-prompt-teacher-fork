@@ -3,12 +3,12 @@ var cacheName = 'v1';
 
 // Default files to always cache
 var cacheFiles = [
-  './',
-  './index.html',
-  './styles.css',
-  './main.js',
-  './manifest.json',
-  './icon.png'
+  '/openai-prompt-teacher/',
+  '/openai-prompt-teacher/index.html',
+  '/openai-prompt-teacher/styles.css',
+  '/openai-prompt-teacher/main.js',
+  '/openai-prompt-teacher/manifest.json',
+  '/openai-prompt-teacher/icon.png'
 ]
 
 self.addEventListener('install', function(e) {
