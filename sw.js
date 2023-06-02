@@ -8,7 +8,9 @@ var cacheFiles = [
   '/openai-prompt-teacher/styles.css',
   '/openai-prompt-teacher/main.js',
   '/openai-prompt-teacher/manifest.json',
-  '/openai-prompt-teacher/icon.png'
+  '/openai-prompt-teacher/favicon.ico',
+  '/openai-prompt-teacher/icon-192x192.png',
+  '/openai-prompt-teacher/icon-512x512.png'
 ]
 
 self.addEventListener('install', function(e) {
