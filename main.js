@@ -21,3 +21,14 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/openai-prompt-teacher/sw.js');
   });
 }
+
+// Handle settings form submission
+document.querySelector("#settings form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const apiKey = document.querySelector("#api-key").value;
+  const notifTime = document.querySelector("#notif-time").value;
+
+  // Here, you can save the apiKey and notifTime to localStorage or to a variable in the script
+  console.log("API Key: ", apiKey);
+  console.log("Notification Time: ", notifTime);
+});
