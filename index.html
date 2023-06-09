@@ -7,22 +7,28 @@
   <link rel="manifest" href="/openai-prompt-teacher/manifest.json">
   <title>Prompt Practice</title>
   <link rel="stylesheet" href="/openai-prompt-teacher/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1>Welcome to Prompt Practice!</h1>
-  <button id="show">Show Notification</button>
-
-  <!-- Simple Settings UI -->
-  <div id="settings">
-    <h2>Settings</h2>
-    <form>
-      <label for="api-key">OpenAI API Key:</label><br>
-      <input type="text" id="api-key" name="api-key"><br>
-      <label for="notif-time">Notification Time:</label><br>
-      <input type="time" id="notif-time" name="notif-time">
-      <input type="submit" value="Save">
-    </form>
-  </div>
+    <div>
+      <h1 class="text-green-400 text-center text-5xl font-extrabold mt-10">Welcome to Prompt Practice!</h1>
+    </div>
+    <div class="text-center">
+      <button class="bg-blue-500 rounded-lg border-dashed px-20 py-3 mt-10 hover:bg-red-500" id="show">Show Notification</button>
+    </div>
+    <!-- Simple Settings UI -->
+    <div class="ml-20" id="settings">
+      <h2 class="text-4xl text-purple-400 font-bold mt-10 mb-8">Settings</h2>
+      <form>
+        <label class="font-bold" for="api-key">OpenAI API Key:</label><br>
+        <input class="mb-10 placeholder:italic placeholder:text-slate-400 block bg-green-white border border-slate-300 rounded-lg py-2 pl-2 pr-2 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm w-1/2 mt-5" type="text" id="api-key" name="api-key"><br>
+        <label class="text-blue-600 font-bold text-2xl"  for="notif-time">Notification Time:</label><br>
+        <div>
+          <input class="placeholder:italic placeholder:text-slate-500 block border border-slate-300 rounded-lg py-2 pl-2 pr-2 shadow-smsm:text-sm w-1/2 mt-5 " type="time" id="notif-time" name="notif-time">
+          <input class="bg-green-400 px-8 py-2 text-center"  type="submit" value="Save">
+        </div>
+      </form>
+    </div>
 
   <script src="/openai-prompt-teacher/main.js"></script>
 </body>
